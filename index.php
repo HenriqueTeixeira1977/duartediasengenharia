@@ -60,16 +60,17 @@
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
-    </div><!-- End Top Bar -->
+    </div>
+    <!-- End Top Bar -->
 
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Duarte Dias Engenharia</h1>
-          <span>.</span>
+          <img src="assets/img/logo.png" alt="">
+          <h1 class="sitename">DuarteDiasEng</h1>
+          <h2><span>.</span></h2>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -1126,7 +1127,7 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Impact</span>
+            <span class="sitename">DuartDiasEng.</span>
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
