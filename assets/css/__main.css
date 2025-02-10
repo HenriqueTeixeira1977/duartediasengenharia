@@ -53,7 +53,7 @@
 }
 
 .accent-background {
-  --background-color: #008374;
+  --background-color: #830000;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --accent-color: #ffffff;
@@ -96,8 +96,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* Pulsating Play Button
-------------------------------*/
+/* Pulsating Play Button------------------------------*/
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
