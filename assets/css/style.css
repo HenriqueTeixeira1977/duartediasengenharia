@@ -389,9 +389,8 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     background: var(--background-color);
     transition: all 0.6s ease-out;
-  }
-  
-  #preloader:before {
+}  
+#preloader:before {
     content: "";
     position: fixed;
     top: calc(50% - 30px);
@@ -402,9 +401,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 60px;
     height: 60px;
     animation: animate-preloader 1.5s linear infinite;
-  }
-  
-  @keyframes animate-preloader {
+}  
+@keyframes animate-preloader {
     0% {
       transform: rotate(0deg);
     }
@@ -412,7 +410,281 @@ h1, h2, h3, h4, h5, h6 {
     100% {
       transform: rotate(360deg);
     }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: -15px;
+    z-index: 99999;
+    background-color: var(--accent-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}  
+.scroll-top i {
+    font-size: 24px;
+    color: var(--contrast-color);
+    line-height: 0;
+}
+
+.scroll-top:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    color: var(--contrast-color);
+}
+
+.scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
   }
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+    --background-color: var(--accent-color);
+    --default-color: #fff;
+    --heading-color: #fff;
+    color: var(--default-color);
+    background-color: var(--background-color);
+    position: relative;
+}
+.page-title .heading {
+    padding: 160px 0 80px 0;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+.page-title .heading h1 {
+    font-size: 38px;
+    font-weight: 700;
+}
+.page-title nav {
+    background-color: color-mix(in srgb, var(--default-color), transparent 92%);
+    padding: 20px 0;
+}
+.page-title nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.page-title nav ol a {
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+.page-title nav ol a:hover {
+    color: var(--default-color);
+}
+.page-title nav ol li+li {
+    padding-left: 10px;
+}
+.page-title nav ol li+li::before {
+    content: "/";
+    display: inline-block;
+    padding-right: 10px;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+    color: var(--default-color);
+    background-color: red;
+    padding: 60px 0;
+    scroll-margin-top: 112px;
+    overflow: clip;
+}
+@media (max-width: 1199px) {
+    section,
+    .section {
+        scroll-margin-top: 100px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+}
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.section-title h2:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.section-title p {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {background-color: rgb(40, 40, 40);
+    width: 100%;
+    position: relative;
+    padding: 140px 0 0 0;
+}
+.hero .container {background-color: #05965200;
+    position: relative;
+    z-index: 3;
+}
+.hero h3{background-color: rgba(255, 255, 0, 0);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 0;
+    color: #ffffff;
+}
+.hero h2 {background-color: rgba(255, 0, 0, 0);
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #ffbb00;
+}
+/*
+.hero h2 .accent {
+    color: var(--conrast-color);
+}
+*/
+.hero p {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+.hero .btn-get-started {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+    border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+}
+.hero .btn-get-started:hover {
+    border-color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+.hero .btn-watch-video {
+    font-size: 16px;
+    transition: 0.5s;
+    margin-left: 25px;
+    font-weight: 600;
+    color: var(--default-color);
+}
+.hero .btn-watch-video i {
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+}
+.hero .btn-watch-video:hover i {
+    color: var(--default-color);
+}
+@media (max-width: 640px) {
+.hero h2 {
+    font-size: 36px;
+}
+.hero .btn-get-started,
+.hero .btn-watch-video {
+    font-size: 14px;
+}
+}
+.hero .icon-boxes {
+    padding-bottom: 60px;
+    z-index: 4;
+}
+@media (min-width: 1200px) {
+.hero .icon-boxes:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(50% + 20px);
+    background-color: var(--default-color);
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+}
+.hero .icon-box {
+    padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
+    background: var(--background-color);
+    box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.hero .icon-box .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+.hero .icon-box .title a {
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    transition: 0.3s;
+}
+.hero .icon-box .icon {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    font-size: 48px;
+    line-height: 1;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+.hero .icon-box:hover {
+    background-color: color-mix(in srgb, var(--background-color), white 10%);
+}
+.hero .icon-box:hover .title a,
+.hero .icon-box:hover .icon {
+    color: var(--contrast-color);
+}
+  
+  
+
   
 
 

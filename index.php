@@ -117,7 +117,8 @@
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-5 justify-content-between">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h2><span>Somos a </span><span class="accent">Duarte Dias Engenharia</span></h2>
+            <h3>Somos a</h3>
+            <h2><span class="accent">Duarte Dias Engenharia</span></h2>
             <p>Nós atuamos nas áreas da construção civil, especializada em perícias de engenharia e consultoria técnica.</p>
             <div class="d-flex">
               <a href="#about" class="btn-get-started">Saiba Mais</a>
